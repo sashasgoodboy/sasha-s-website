@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Babylicious' Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- Background decor -->
+    <div class="decor decor-hearts-left" aria-hidden="true"></div>
+    <div class="decor decor-paperplane" aria-hidden="true"></div>
+    <div class="decor decor-calendar" aria-hidden="true">
+      <div class="calendar">
+        <div class="calendar-top"></div>
+        <div class="calendar-body">
+          <div class="calendar-date">
+            <div class="calendar-num">14</div>
+            <div class="calendar-mon">FEB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen: ASK -->
+    <section class="screen active" id="screen-ask" role="region" aria-label="Valentine question">
+      <!-- Handwritten-style stickers (scattered) -->
+      <div class="ask-stickers" aria-hidden="true">
+        <img class="sticker s1" src="./assets/teddy.png" alt="">
+        <img class="sticker s2" src="./assets/flowers.png" alt="">
+        <img class="sticker s3" src="./assets/teddy2.png" alt="">
+        <img class="sticker s4" src="./assets/flowers2.png" alt="">
+        <img class="sticker s5" src="./assets/flowers.png" alt="">
+        <img class="sticker s6" src="./assets/teddy.png" alt="">
+      </div>
+      <!-- Heart scatter (outside frame) -->
+      <div class="heart-scatter" aria-hidden="true">
+        <span class="heart h1"></span>
+        <span class="heart h2"></span>
+        <span class="heart h3"></span>
+        <span class="heart h4"></span>
+        <span class="heart h5"></span>
+        <span class="heart h6"></span>
+        <span class="heart h7"></span>
+        <span class="heart h8"></span>
+        <span class="heart h9"></span>
+        <span class="heart h10"></span>
+        <span class="heart h11"></span>
+        <span class="heart h12"></span>
+      </div>
+
+      <div class="center">
+        <div class="bunnies" aria-hidden="true">
+          <svg width="90" height="60" viewBox="0 0 180 120">
+            <g fill="none" stroke="none">
+              <g transform="translate(28,34)">
+                <ellipse cx="26" cy="40" rx="22" ry="18" fill="#fff" stroke="#f0b6c7" stroke-width="4"/>
+                <ellipse cx="14" cy="10" rx="10" ry="18" fill="#fff" stroke="#f0b6c7" stroke-width="4"/>
+                <ellipse cx="38" cy="10" rx="10" ry="18" fill="#fff" stroke="#f0b6c7" stroke-width="4"/>
+                <circle cx="18" cy="38" r="3" fill="#5a2a2a"/>
+                <circle cx="34" cy="38" r="3" fill="#5a2a2a"/>
+                <circle cx="26" cy="46" r="4" fill="#ff7aa2"/>
+              </g>
+
+              <g transform="translate(94,30)">
+                <ellipse cx="26" cy="44" rx="22" ry="18" fill="#fff" stroke="#f0b6c7" stroke-width="4"/>
+                <ellipse cx="14" cy="12" rx="10" ry="18" fill="#fff" stroke="#f0b6c7" stroke-width="4"/>
+                <ellipse cx="38" cy="12" rx="10" ry="18" fill="#fff" stroke="#f0b6c7" stroke-width="4"/>
+                <circle cx="18" cy="42" r="3" fill="#5a2a2a"/>
+                <circle cx="34" cy="42" r="3" fill="#5a2a2a"/>
+                <circle cx="26" cy="50" r="4" fill="#ff7aa2"/>
+                <path d="M78,58 C78,50 90,50 90,58 C90,64 84,66 84,70 C84,66 78,64 78,58 Z"
+                      transform="translate(-32,-10)" fill="#ff4d7d"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <h1 class="title">Hey my gorgeous girl Sasha,<br/>Will you be my Valentine?</h1>
+
+        <div class="buttons">
+          <button class="btn btn-primary" id="btn-yes">YES OF COURSE</button>
+          <button class="btn btn-secondary" id="btn-no">NO THANK YOU</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen: TRY AGAIN -->
+    <section class="screen" id="screen-no" role="region" aria-label="Try again">
+      <div class="center">
+        <div class="sad-heart" aria-hidden="true">
+          <svg width="90" height="80" viewBox="0 0 120 110">
+            <path d="M60 98
+                     C15 68, 10 40, 30 26
+                     C46 14, 58 24, 60 30
+                     C62 24, 74 14, 90 26
+                     C110 40, 105 68, 60 98 Z"
+                  fill="#ff5a73" stroke="#d83c53" stroke-width="6" />
+            <circle cx="44" cy="52" r="5" fill="#5a2a2a"/>
+            <circle cx="76" cy="52" r="5" fill="#5a2a2a"/>
+            <path d="M50 70 C58 78, 62 78, 70 70" stroke="#5a2a2a" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M32 62 C28 76, 36 78, 38 66" fill="#7fd3ff" opacity="0.9"/>
+          </svg>
+        </div>
+
+        <h2 class="title">Try again please :(</h2>
+        <button class="btn btn-primary" id="btn-try-again">Try Again</button>
+      </div>
+    </section>
+
+    <!-- Screen: GIFTS MENU -->
+    <section class="screen" id="screen-yes" role="region" aria-label="Gifts menu">
+      <div class="center">
+        <div class="mini-heart" aria-hidden="true">
+          <svg width="70" height="60" viewBox="0 0 120 110">
+            <path d="M60 98
+                     C15 68, 10 40, 30 26
+                     C46 14, 58 24, 60 30
+                     C62 24, 74 14, 90 26
+                     C110 40, 105 68, 60 98 Z"
+                  fill="#ff5a73" />
+            <circle cx="44" cy="52" r="5" fill="#5a2a2a"/>
+            <circle cx="76" cy="52" r="5" fill="#5a2a2a"/>
+            <path d="M46 66 C54 74, 66 74, 74 66" stroke="#5a2a2a" stroke-width="6" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <h2 class="title">Yay, you said yes!</h2>
+        <p class="subtitle">I made all these for you my love</p>
+
+        <div class="gift-grid">
+          <button class="gift-card" data-gift="1"><span>Gift 1</span></button>
+          <button class="gift-card" data-gift="2"><span>Gift 2</span></button>
+          <button class="gift-card" data-gift="3"><span>Gift 3</span></button>
+        </div>
+
+        <button class="link-btn" id="btn-back-ask">← back</button>
+      </div>
+    </section>
+
+    <!-- Screen: GIFT 1 -->
+    <section class="screen" id="screen-gift-1" role="region" aria-label="Gift 1 bouquet">
+      <div class="gift-layout">
+        <div class="bubble bubble-left-top">
+          I will always love you<br/>no matter what baby
+        </div>
+        <div class="bubble bubble-left-mid">
+          You are the most perfect person in the entire world,<br/>in every way possible
+        </div>
+        <div class="bubble bubble-left-bottom">
+          You are the best part<br/>of my life
+        </div>
+
+        <!-- Bouquet image (your generated hand-drawn art) -->
+        <div class="bouquet-frame">
+          <div class="frame-inner">
+            <!-- Put the file here: assets/blue-rose-bouquet.png -->
+            <img
+              src="./assets/blue-rose-bouquet.png"
+              alt="Bouquet of blue roses"
+              class="bouquet-image"
+            >
+          </div>
+        </div>
+
+        <div class="bubble bubble-right-top">You will forever be the one and only<br/>person in my heart forevevr and ever on my life.</div>
+        <div class="bubble bubble-right-mid">Ever since I met you, I can't<br/>imagine a world without you in it</div>
+        <div class="bubble bubble-right-bottom">You are my everything,<br/>my world, my life, and you're everything I have every wished for </div>
+        <button class="heart-restart" id="btn-gift1-next" title="Next">
+          click ♥
+        </button>
+
+        <button class="link-btn back-btn" data-back="yes">← back</button>
+      </div>
+    </section>
+
+    <!-- Screen: GIFT 2 -->
+    <section class="screen" id="screen-gift-2" role="region" aria-label="Gift 2 letter">
+      <div class="letter-wrap">
+        <div class="letter-head">
+          <h2 class="letter-title">Words from my <span>Heart</span></h2>
+          <div class="xoxo">XOXO</div>
+        </div>
+        <div class="note-scroll">
+          <div class="note">
+            <p class="note-line red">To the love of my life, you make my life so meaningful and I am so lucky to have you</p>
+            <p class="note-line">as my valentine this year and for all the years to come. I love you wholeheartedly</p>
+            <p class="note-line red">and I can't wait to continue loving you for the rest of my life. I know I tell you so</p>
+            <p class="note-line">much but you are the most beautiful girl in the world and you're so perfect, but I don't</p>
+            <p class="note-line red">say it enough and you deserve to hear it all day everyday anywhere everywhere</p>
+            <p class="note-line">(freak). You are the prettiest girl in the world, and every single part of you is</p>
+            <p class="note-line red">perfect. I know you think you're flawed, but you're not to me. You have 0 flaws in you,</p>
+            <p class="note-line">whether that is physical or non-physical. You are the definition of perfection.</p>
+            <p class="note-line red">You're the most attractive person in the entire world on my life and I'm so in love</p>
+            <p class="note-line">with you and you only forever and ever on my life. It's not even just your physical</p>
+            <p class="note-line red">appearance but your personality too. You're so kind, caring, loving, thoughtful, smart,</p>
+            <p class="note-line">funny, cute, adorable, hot, pretty, perfect and so much more. I could say I love you a</p>
+            <p class="note-line red">million times a day and it still wouldn't be enough to express how much I truly love</p>
+            <p class="note-line">you. You are my world, my life, my everything. I can't wait to spend the rest of my</p>
+            <p class="note-line red">life with you and make you the happiest girl in the entire world, and I want to be </p>
+            <p class="note-line">there to support you through everything and make sure you achieve all your dreams</p> 
+            <p class="note-line red">and treat you like the princess you are. I'm so proud of you and I always will be so </p>
+            <p class="note-line">proud of you on my life. I love you so much my gorgeous girl, and I cannot wait.</p>
+            <p class="note-line red">to be a part of your CUTE FAMILY OMDS THEY ARE SO CUTE AND FUNNY. </p>
+            <p class="note-line">Mr Eventov is literally the sweetest guy ever, every time he offered to make you tea</p>
+            <p class="note-line red">or breakfast I was like omds he takes such good care of my baby. And he is SO FUNNY</p>
+            <p class="note-line">AND CUTE AND PERFORMATIVE, I LOVE HIM ALREADY. Then we have Mrs Eventov, who</p>
+            <p class="note-line red">I alongside Mr Eventov am so grateful for, because they've given me my world. She</p>
+            <p class="note-line">is so funny and filterless and I LOVE THAT about her, yes she does ragebait</p>
+            <p class="note-line red">sometimes but she is so caring and kind and loving. Then onto big broski, the amount</p>
+            <p class="note-line">of respect I have for him is IMMENSE. I've never met him and from the limited things</p>
+            <p class="note-line red">you've told me about him, he seems like such a genuine, nice and caring big brother,</p> 
+            <p class="note-line">and he will ALWAYS be glazed by me and I can't wait to meet him and experience his</p>
+            <p class="note-line red">ELITE CHAT (not as good as yours though baby girl). Moving onto sister Eventov,</p>
+            <p class="note-line">from the way you talk about her and what I've seen of her, she seems so nice and</p>
+            <p class="note-line red">caring, and yes she does the most sometimes like when I gave you that hickey (xxx)</p>
+            <p class="note-line">but she seems like such a nice person and I can't wait to meet her too. Finally, the</p>
+            <p class="note-line red">family's goodest boy, M4Z, or better known as backshot boy. He is SOOO FUNNY</p>
+            <p class="note-line">(Nowhere near as funny as you) and SO OUTRAGEOUS but I love him so much and</p>
+            <p class="note-line red">he's so talented. Your family is so cute omds. However, nothing comes close to how</p>
+            <p class="note-line">cute and perfect you are my love. I love you so much Sasha, and I can't wait to</p>
+            <p class="note-line red">spend the rest of my life with you.
+            <p class="note-sign">— your forever, Tanush</p>
+          </div>
+        </div>
+
+        <button class="heart-restart" id="btn-gift2-next">click ♥</button>
+        <button class="link-btn back-btn" data-back="yes">← back</button>
+      </div>
+    </section>
+
+    <!-- Screen: GIFT 3 -->
+    <section class="screen" id="screen-gift-3" role="region" aria-label="Gift 3 QR code">
+      <div class="qr-wrap">
+        <h2 class="title">Scan the QR code!</h2>
+
+        <!-- Desktop: big record on the left, arrows, QR -->
+        <div class="qr-row qr-layout">
+          <div class="record-big" aria-hidden="true">
+            <svg class="record-svg" viewBox="0 0 320 240">
+              <ellipse cx="150" cy="212" rx="120" ry="18" fill="rgba(0,0,0,0.08)"/>
+
+              <path d="M45 110
+                       Q45 92 63 92
+                       H250
+                       Q268 92 268 110
+                       V205
+                       Q268 223 250 223
+                       H63
+                       Q45 223 45 205 Z"
+                    fill="#ff4d7d" stroke="#c51f3f" stroke-width="6" stroke-linejoin="round"/>
+
+              <path d="M70 40
+                       Q70 25 85 25
+                       H190
+                       Q205 25 205 40
+                       V120
+                       H70 Z"
+                    fill="#ff4d7d" stroke="#c51f3f" stroke-width="6" stroke-linejoin="round"/>
+
+              <rect x="88" y="52" width="100" height="76" rx="14"
+                    fill="#bfefff" stroke="#7bc9ff" stroke-width="6"/>
+
+              <!-- Heart on screen (pulses on desktop) -->
+              <path class="record-heart"
+                    d="M138 98
+                       C126 88 110 96 116 112
+                       C120 124 138 132 138 132
+                       C138 132 156 124 160 112
+                       C166 96 150 88 138 98 Z"
+                    fill="#ff4d7d"/>
+
+              <!-- Vinyl group (spins on desktop) -->
+              <g class="vinyl">
+                <ellipse cx="230" cy="168" rx="70" ry="38" fill="#a13a53" opacity="0.25"/>
+                <ellipse cx="230" cy="158" rx="70" ry="38" fill="#2b2b2b"/>
+                <ellipse cx="230" cy="158" rx="52" ry="28" fill="#3a3a3a"/>
+                <ellipse cx="230" cy="158" rx="18" ry="10" fill="#ff4d7d"/>
+                <ellipse cx="230" cy="158" rx="60" ry="33" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="3"/>
+                <ellipse cx="230" cy="158" rx="42" ry="23" fill="none" stroke="rgba(255,255,255,0.10)" stroke-width="3"/>
+              </g>
+
+              <path d="M255 118 C275 126 286 140 290 156"
+                    fill="none" stroke="#ffd1de" stroke-width="10" stroke-linecap="round"/>
+              <circle cx="292" cy="160" r="10" fill="#ffd1de"/>
+              <path d="M286 150 L268 160" stroke="#ffd1de" stroke-width="10" stroke-linecap="round"/>
+
+              <circle cx="78" cy="195" r="8" fill="#ffd1de"/>
+              <circle cx="102" cy="195" r="8" fill="#ffd1de" opacity="0.75"/>
+            </svg>
+          </div>
+
+          <div class="arrow" aria-hidden="true">↘</div>
+
+          <div class="art-qr-frame" title="Scan me">
+            <div id="art-qr"></div>
+          </div>
+
+          <div class="arrow" aria-hidden="true">↙</div>
+        </div>
+
+        <div class="qr-hint">
+          <button class="restart-link" id="btn-restart">click to restart!</button>
+        </div>
+
+        <button class="link-btn back-btn" data-back="yes">← back</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Artistic QR library -->
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0/lib/qr-code-styling.js"></script>
+  <script src="script.js"></script>
+  <!-- Heart burst layer -->
+  <div id="heart-burst" aria-hidden="true"></div>
+
+</body>
+</html>
